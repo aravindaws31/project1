@@ -31,6 +31,8 @@ jobs:
           echo test, and deploy your project.
       - name: Java version
         run: java -version
+      - name: docker installation
+        run: yum install docker -y
       - name: docker version
         run: docker -v
       - name: Terraform version
