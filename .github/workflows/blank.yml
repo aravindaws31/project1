@@ -43,5 +43,6 @@ jobs:
         working-directory: /home/ec2-user/project1
         run: terraform init -backend-config="access_key=${{ secrets.AWS_ACCESS_KEY }}" -backend-config="secret_key=${{ secrets.AWS_SECRET_KEY }}"
       - name: Appying terraform
+        run: terraform validate
         run: terraform apply --auto-approve
         
