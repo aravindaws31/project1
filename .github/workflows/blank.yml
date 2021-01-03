@@ -38,6 +38,8 @@ jobs:
         run: java -version
       - name: docker installation
         run: sudo apt install docker -y
+      - name: docker start
+        run: systemctl start docker
       - name: docker status
         run: systemctl status docker
       - name: terraform status
