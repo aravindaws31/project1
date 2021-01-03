@@ -33,7 +33,9 @@ jobs:
           echo test, and deploy your project.
         env:
           AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
-          AWS_SECRET_KEY: ${ secrets.AWS_SECRET_KEY }}
+          AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
+      - name:  Java installation
+        run: sudo yum install java-1.8.0 -y
       - name: Java version
         run: java -version
       - name: yum utils installation
