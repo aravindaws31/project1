@@ -37,7 +37,7 @@ jobs:
       - name: Java version
         run: java -version
       - name: docker installation
-        run: sudo yum install docker -y
+        run: sudo apt-get install docker -y
       - name: docker version
         run: docker -v
       - name: Terraform version
