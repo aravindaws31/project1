@@ -36,12 +36,6 @@ jobs:
           AWS_SECRET_KEY: ${ secrets.AWS_SECRET_KEY }}
       - name: Java version
         run: java -version
-      - name: docker installation
- #       run: sudo apt install docker -y
-      - name: docker start
- #       run: systemctl service docker start
-      - name: docker status
- #       run: systemctl status docker
       - name: terraform status
         run: systemctl status terraform
       - name: Terraform version
