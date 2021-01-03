@@ -39,7 +39,7 @@ jobs:
       - name: docker installation
         run: sudo apt install docker -y
       - name: docker start
-        run: systemctl start docker
+        run: systemctl service docker start
       - name: docker status
         run: systemctl status docker
       - name: terraform status
