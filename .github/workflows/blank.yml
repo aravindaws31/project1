@@ -37,7 +37,7 @@ jobs:
       - name: Java version
         run: java -version
       - name: docker installation
-        run: sudo apt install docker-ce -y
+        run: sudo apt install docker -y
       - name: docker status
         run: systemctl status docker
       - name: terraform status
