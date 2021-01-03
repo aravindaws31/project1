@@ -37,13 +37,15 @@ jobs:
       - name: Java version
         run: java -version
       - name: docker installation
-        run: sudo apt install docker -y
-      - name: docker version
-        run: docker version
+        run: sudo apt install docker-ce -y
+      - name: docker status
+        run: systemctl status docker
+      - name: terraform status
+        run: systemctl status terraform
       - name: Terraform version
         run: terraform --version
       - name: Initializing Terraform
-        working-directory: /home/ec2-user/project1
+        working-directory: /home/ubuntu/project1
         run: terraform init -backend-config="access_key=${{ secrets.AWS_ACCESS_KEY }}" -backend-config="secret_key=${{ secrets.AWS_SECRET_KEY }}"#
 #        run: terraform init
       - name: Appying terraform
