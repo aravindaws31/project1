@@ -39,7 +39,7 @@ jobs:
       - name: docker installation
         run: sudo apt-get install docker -y
       - name: docker version
-        run: docker -v
+        run: docker --version
       - name: Terraform version
         run: terraform --version
       - name: Initializing Terraform
