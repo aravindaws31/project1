@@ -15,7 +15,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: linux
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -37,9 +37,9 @@ jobs:
       - name: Java version
         run: java -version
       - name: docker installation
-        run: sudo apt-get install docker -y
+        run: sudo yum install docker -y
       - name: docker version
-        run: docker --version
+        run: docker -v
       - name: Terraform version
         run: terraform --version
       - name: Initializing Terraform
